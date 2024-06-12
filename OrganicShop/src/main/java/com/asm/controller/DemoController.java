@@ -22,4 +22,10 @@ public class DemoController {
     	model.addAttribute("items",items);
         return "user/checkout";
     }
+    @RequestMapping("/user/checkout")
+    public String thanh_toan12(Model model) {
+    	List<Orders> items = orderDAO.findAll();
+    	model.addAttribute("items",items);
+        return "user/checkout";
+    }
 }
